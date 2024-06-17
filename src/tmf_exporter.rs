@@ -336,8 +336,7 @@ fn find_best_vertex_spilt(vertices: &[Vector3], shortest_edge: FloatType) -> Opt
             }
         }
     }
-    assert!(best_split_index < vertices.len() - 1);
-    if best_split_score > 0 {
+    if best_split_score > 0 && best_split_index < vertices.len() - 1 {
         Some(best_split_index)
     } else {
         None
